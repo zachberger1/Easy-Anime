@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy Anime - Find Your Next Anime</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo-container">
+            <a href="index.html" class="logo">Easy<span>Anime</span></a>
+          </div>
+          <div class="theme-toggle">
+            <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+              <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">Discover Your Next Favorite Anime</h1>
+            <p class="hero-description">Search from thousands of anime titles and find detailed information about your favorite series.</p>
+            <div class="search-container">
+              <div class="search-input-wrapper">
+                <input type="text" id="search-input" class="search-input" placeholder="Search for anime..." autocomplete="off">
+                <button id="search-clear-btn" class="search-clear-btn" aria-label="Clear search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                  </svg>
+                </button>
+                <button id="search-btn" class="search-btn" aria-label="Search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </button>
+              </div>
+              <div id="search-suggestions" class="search-suggestions"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trending-section">
+        <div class="container">
+          <h2 class="section-title">Trending Anime</h2>
+          <div id="trending-anime" class="anime-grid"></div>
+        </div>
+      </section>
+
+      <section class="recently-viewed-section">
+        <div class="container">
+          <h2 class="section-title">Recently Viewed</h2>
+          <div id="recently-viewed" class="anime-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="anime-details-modal" class="modal">
+      <div class="modal-content">
+        <button id="modal-close" class="modal-close" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div id="modal-content" class="modal-body"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 EasyAnime. All rights reserved.</p>
+        <p>Data provided by Jikan API</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/anime.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

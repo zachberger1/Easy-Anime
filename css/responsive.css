@@ -1,0 +1,84 @@
+/* Responsive Styles */
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .search-input {
+    height: 48px;
+    font-size: 1rem;
+  }
+  
+  .anime-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+  
+  .anime-details-header {
+    flex-direction: column;
+  }
+  
+  .anime-details-img {
+    width: 160px;
+    margin-right: 0;
+    margin-bottom: 16px;
+    align-self: center;
+  }
+  
+  .anime-details-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-section {
+    padding: 40px 0;
+  }
+  
+  .trending-section,
+  .recently-viewed-section {
+    padding: 32px 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .anime-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .anime-details-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/* Animation adjustments for mobile */
+@media (prefers-reduced-motion) {
+  .hero-title,
+  .hero-description,
+  .search-container,
+  .anime-card {
+    animation: none;
+  }
+  
+  .anime-card:hover .anime-card-img {
+    transform: none;
+  }
+}
